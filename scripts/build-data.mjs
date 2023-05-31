@@ -73,11 +73,12 @@ contentFiles.forEach(file => {
         return;
     }
     pagesData.push({ ...data, content : processedContent });
+    console.log(`Processed :  "${file}"`)
 });
 
 // Write the data to a file
 try {
-    fs.writeFileSync(path.join(process.cwd(), "data.js"), `
+    fs.writeFileSync(path.join(process.cwd(), "data.mjs"), `
         const data = {
             "posts": ${JSON.stringify(pagesData)}
         }

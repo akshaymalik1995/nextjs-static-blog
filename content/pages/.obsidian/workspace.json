@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fallback option of getStaticProps in Nextjs.md",
+                "file": "_template.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "9756396dbff90148",
@@ -99,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorial on sorting an array of objects in JavaScript.md",
+                "file": "_template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tutorial on sorting an array of objects in JavaScript.md",
+                "file": "_template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tutorial on sorting an array of objects in JavaScript.md"
+                "file": "_template.md"
               }
             }
           }
@@ -160,12 +158,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "36b2d9fe6fe220ee",
+  "active": "0873a47d5127656e",
   "lastOpenFiles": [
-    "Fallback option of getStaticProps in Nextjs.md",
-    "Tutorial on sorting an array of objects in JavaScript.md",
-    "Data fetching with getStaticProps in Nextjs.md",
     "Current Working Directory in Nodejs with process.cwd().md",
+    "Tutorial on sorting an array of objects in JavaScript.md",
+    "Fallback option of getStaticProps in Nextjs.md",
+    "Data fetching with getStaticProps in Nextjs.md",
     "_template.md"
   ]
 }
