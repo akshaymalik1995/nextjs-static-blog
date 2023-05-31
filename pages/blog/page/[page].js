@@ -3,21 +3,18 @@
 import Pagination from '@/components/Pagination'
 import PostList from '@/components/PostList'
 import appConfig from '@/appConfig'
-import data from '@/data.mjs'
-import { formatDate } from '@/utils.mjs'
+
+import { getPosts } from '@/utils.mjs'
 
 export async function getStaticProps(context) {
     const {pagination: {postsPerPage}} = appConfig
-    let {posts} = data
+    let posts = getPosts()
     let page = +context.params.page || 1
     let skip = (page - 1) * postsPerPage
     let noMorePages = posts.length <= skip + postsPerPage
     posts = posts.slice(skip, skip + postsPerPage)
+    console.log(`getStaticProps: page=${page}, skip=${skip}, posts.length=${posts.length}, noMorePages=${noMorePages}`)
     
-    // Format dates
-    posts = posts.map(post => {
-      return {...post, date: formatDate(post.date)}
-    })
   
   
     return {
@@ -32,7 +29,7 @@ export async function getStaticProps(context) {
 //   Write getStaticPaths function
 export async function getStaticPaths() {
     const {pagination: {postsPerPage}} = appConfig
-    let {posts} = data
+    let posts = getPosts()
     let count = posts.length
     let pageCount = Math.ceil(count / postsPerPage)
     let paths = []

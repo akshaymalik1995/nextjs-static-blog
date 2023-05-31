@@ -7,15 +7,15 @@ import appConfig from '@/appConfig'
 export async function getStaticProps() {
   const {pagination: {postsPerPage}} = appConfig
   let posts = getPosts()
-  // Get the first page of posts
-  posts = posts.slice(0, postsPerPage)
   let noMorePages = posts.length <=  postsPerPage
+  let pagePosts = posts.slice(0, postsPerPage)
+  
  
 
 
   return {
     props: {
-      posts: posts || [],
+      posts: pagePosts || [],
       noMorePages
     },
   }
