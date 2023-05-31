@@ -23,7 +23,7 @@ export async function getStaticProps() {
             // Loop through each tag in the post
             post.tags.forEach((tag) => {
                 // Check if the tag already exists in the tags array
-                let index = tags.findIndex((t) => t.name === tag);
+                let index = tags.findIndex((t) => t.name === tag.name);
 
                 // If the tag doesn't exist, add it to the tags array
                 if (index === -1) {

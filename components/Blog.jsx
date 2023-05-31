@@ -23,7 +23,7 @@ export default function Blog({ post, headings }) {
             <hr className="my-8" />
 
             {/* Table of Content */}
-            {headings && (
+            {headings && headings.length > 1 && (
                 <div className="my-8">
                     <div className="text-gray-500 text-sm">
                         <h3 className="text-gray-700 text-lg mb-2">Table of Contents</h3>
