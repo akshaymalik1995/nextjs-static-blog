@@ -21,7 +21,7 @@ export async function getStaticProps(context) {
 
     return {
         props: {
-            post: post || {},
+            post: post,
         },
     }
 }
@@ -42,7 +42,16 @@ export async function getStaticPaths() {
 
 export default function Post(props) {
     const { post } = props
-    const headings = post?.content?.match(/<h([1-6]).*?>(.*?)<\/h\1>/gi)?.map((heading) => {
+    if (!post) {
+        return (
+            <>
+                <div className="container max-w-2xl mx-auto" >
+                    <h1 className="text-4xl my-12">No Post</h1>
+                </div>
+            </>
+        )
+    }
+    const headings = post.content.match(/<h([1-6]).*?>(.*?)<\/h\1>/gi)?.map((heading) => {
         const level = heading.match(/<h([1-6]).*?>/i)[1];
         const text = heading.replace(/<\/?h[1-6].*?>/gi, '');
         const id = text.replace(/\s+/g, '-').toLowerCase();
@@ -53,7 +62,7 @@ export default function Post(props) {
 
 
     // Adding ID to each heading in post content and return it
-    post.content = post?.content?.replace(/<h([1-6]).*?>(.*?)<\/h\1>/gi, (match, level, text) => {
+    post.content = post.content.replace(/<h([1-6]).*?>(.*?)<\/h\1>/gi, (match, level, text) => {
         const id = text.replace(/\s+/g, '-').toLowerCase();
         return `<h${level} id="${id}">${text}</h${level}>`;
     });
