@@ -7,7 +7,7 @@ import Link from "next/link"
 import { Link as ScrollLink } from 'react-scroll';
 import Blog from "@/components/Blog"
 import { formatDate } from '@/utils.mjs'
-import data from '@/data'
+import data from '@/data.mjs'
 
 
 export async function getStaticProps(context) {

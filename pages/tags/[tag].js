@@ -1,5 +1,5 @@
 import PostList from "@/components/PostList";
-import data from "@/data";
+import data from "@/data.mjs";
 import { formatDate } from "@/utils.mjs";
 
 export async function getStaticProps(context) {

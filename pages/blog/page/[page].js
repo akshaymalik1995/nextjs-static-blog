@@ -3,7 +3,7 @@
 import Pagination from '@/components/Pagination'
 import PostList from '@/components/PostList'
 import appConfig from '@/appConfig'
-import data from '@/data'
+import data from '@/data.mjs'
 import { formatDate } from '@/utils.mjs'
 
 export async function getStaticProps(context) {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import data from "@/data";
+import data from "@/data.mjs";
 
 export async function getStaticProps() {
     try {

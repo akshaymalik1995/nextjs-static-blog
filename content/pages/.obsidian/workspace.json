@@ -1,0 +1,171 @@
+{
+  "main": {
+    "id": "6240cbae073524d3",
+    "type": "split",
+    "children": [
+      {
+        "id": "3f812dd67c573e62",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0873a47d5127656e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Fallback option of getStaticProps in Nextjs.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "36b2d9fe6fe220ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tutorial on sorting an array of objects in JavaScript.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a76911b778ff143d",
+    "type": "split",
+    "children": [
+      {
+        "id": "b90d4562695f2ab3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "708c1e6c7a49c35e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "739d9fed15791b06",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4123dcb27757c827",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "9756396dbff90148",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e1b2b98d6a91202",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "342ad3d0e6cbbb20",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Tutorial on sorting an array of objects in JavaScript.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f9df4fadf5cb1cfb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Tutorial on sorting an array of objects in JavaScript.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5d8db1e2a23701ea",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4549c6cb4d9d0443",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Tutorial on sorting an array of objects in JavaScript.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "36b2d9fe6fe220ee",
+  "lastOpenFiles": [
+    "Fallback option of getStaticProps in Nextjs.md",
+    "Tutorial on sorting an array of objects in JavaScript.md",
+    "Data fetching with getStaticProps in Nextjs.md",
+    "Current Working Directory in Nodejs with process.cwd().md",
+    "_template.md"
+  ]
+}

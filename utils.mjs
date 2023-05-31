@@ -19,7 +19,7 @@ export const slugify = (text, addId = true) => {
     }
 }
 
-import data from './data'
+import data from './data.mjs'
 export const getPosts = () => {
     let {posts} = data
     posts = posts.sort((a, b) => {
