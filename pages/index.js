@@ -1,16 +1,11 @@
 import Link from 'next/link'
 import PostList from '@/components/PostList'
 import appConfig from '@/appConfig'
-import data from '@/data'
-import { formatDate } from '@/utils.mjs'
+import { getPosts } from '@/utils.mjs'
+
 
 export async function getStaticProps() {
-  let {posts} = data
-  // Format dates
-  posts = posts.map(post => {
-    return {...post, date: formatDate(post.date)}
-  })
-
+ let posts = getPosts()
 
   return {
     props: {

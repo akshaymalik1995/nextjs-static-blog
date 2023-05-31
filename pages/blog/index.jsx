@@ -1,20 +1,16 @@
 import Pagination from '@/components/Pagination' // Importing Pagination component
 import PostList from '@/components/PostList' // Importing PostList component
-import { formatDate } from '@/utils.mjs' 
-import data from '@/data'
+import { getPosts } from '@/utils.mjs'
 import appConfig from '@/appConfig'
 
 
 export async function getStaticProps() {
   const {pagination: {postsPerPage}} = appConfig
-  let {posts} = data
+  let posts = getPosts()
   // Get the first page of posts
   posts = posts.slice(0, postsPerPage)
   let noMorePages = posts.length <=  postsPerPage
-  // Format dates
-  posts = posts.map(post => {
-    return {...post, date: formatDate(post.date)}
-  })
+ 
 
 
   return {
