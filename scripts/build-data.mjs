@@ -59,7 +59,7 @@ contentFiles.forEach(file => {
 
     data.tags = data.tags.map(tag => {
             if (typeof tag !== "string") return
-            return {name: tag, id: slugify(tag)}
+            return {name: slugify(tag, false), id: slugify(tag)}
         })
     
 

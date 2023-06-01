@@ -26,9 +26,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ce39e982bb708670",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Introduction to routing in Next.js using App Router.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -78,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "9756396dbff90148",
@@ -94,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Using Middleware in Next.js.md",
+                "file": "Introduction to routing in Next.js using App Router.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Using Middleware in Next.js.md",
+                "file": "Introduction to routing in Next.js using App Router.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Using Middleware in Next.js.md"
+                "file": "Introduction to routing in Next.js using App Router.md"
               }
             }
           }
@@ -155,9 +168,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d0be04edd8533e98",
+  "active": "ce39e982bb708670",
   "lastOpenFiles": [
+    "Pasted image 20230601202125.png",
     "Using Middleware in Next.js.md",
+    "Introduction to routing in Next.js using App Router.md",
     "Tutorial on getStaticPaths in Nextjs.md",
     "Fallback option of getStaticProps in Nextjs.md",
     "Tutorial on the findIndex method of an Array.md",
