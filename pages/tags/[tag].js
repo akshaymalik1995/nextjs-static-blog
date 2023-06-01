@@ -49,8 +49,8 @@ export async function getStaticPaths() {
             return { params: { tag: tag.name } };
         });
         return {
-            paths,
-            fallback: false,
+            paths : [],
+            fallback: "blocking",
         };
     } catch (error) {
         console.error(error);

@@ -37,8 +37,8 @@ export async function getStaticPaths() {
         paths.push({params: {page: `${i}`}})
     }
     return {
-        paths,
-        fallback: false
+        paths : [],
+        fallback: "blocking"
     }
 }
 
