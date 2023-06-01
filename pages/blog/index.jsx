@@ -38,6 +38,8 @@ export default function Blog(props) {
   return (
     <>
       <div className="container max-w-3xl mx-auto" >
+        <h1 className="text-4xl my-12">Blog</h1>
+        <hr></hr>
         <PostList posts={posts} />
         <Pagination noMorePages={noMorePages} page={1} count={posts.length} />
       </div>
