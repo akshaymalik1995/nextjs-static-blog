@@ -8,30 +8,43 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0873a47d5127656e",
+            "id": "5dfd6bdc178b4ff5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_template.md",
+                "file": "Reading a file in Nodejs.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "36b2d9fe6fe220ee",
+            "id": "8ee1e70be2ff5690",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tutorial on sorting an array of objects in JavaScript.md",
+                "file": "Tutorial on the findIndex method of an Array.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6b9c8ccac871226e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tutorial on getStaticPaths in Nextjs.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -81,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "9756396dbff90148",
@@ -97,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_template.md",
+                "file": "Tutorial on getStaticPaths in Nextjs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_template.md",
+                "file": "Tutorial on getStaticPaths in Nextjs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_template.md"
+                "file": "Tutorial on getStaticPaths in Nextjs.md"
               }
             }
           }
@@ -158,12 +172,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0873a47d5127656e",
+  "active": "6b9c8ccac871226e",
   "lastOpenFiles": [
-    "Current Working Directory in Nodejs with process.cwd().md",
-    "Tutorial on sorting an array of objects in JavaScript.md",
     "Fallback option of getStaticProps in Nextjs.md",
-    "Data fetching with getStaticProps in Nextjs.md",
-    "_template.md"
+    "Tutorial on getStaticPaths in Nextjs.md",
+    "Tutorial on the findIndex method of an Array.md",
+    "Reading a file in Nodejs.md",
+    "Tutorial on sorting an array of objects in JavaScript.md",
+    "_template.md",
+    "Current Working Directory in Nodejs with process.cwd().md",
+    "Data fetching with getStaticProps in Nextjs.md"
   ]
 }

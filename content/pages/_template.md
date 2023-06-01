@@ -18,6 +18,8 @@ Please write your content in markdown format. The title and description are not 
 ### Front Matter
 The metadata of the page is stored in the front matter. The front matter is a YAML block delimited by `---`. The front matter must be at the top of the file and must be followed by a blank line. There should not be a blank line before the front matter.
 
+The name of the file will be used as a slug. Do not change it. 
+
 
 ### Title
 
