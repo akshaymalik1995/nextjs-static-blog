@@ -13,7 +13,6 @@ export async function getStaticProps(context) {
     let skip = (page - 1) * postsPerPage
     let noMorePages = posts.length <= skip + postsPerPage
     posts = posts.slice(skip, skip + postsPerPage)
-    console.log(`getStaticProps: page=${page}, skip=${skip}, posts.length=${posts.length}, noMorePages=${noMorePages}`)
     
   
   
