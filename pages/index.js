@@ -6,6 +6,8 @@ import { getPosts } from '@/utils.mjs'
 
 export async function getStaticProps() {
  let posts = getPosts()
+ const { postsOnHomePage } = appConfig
+ posts = posts.slice(0, postsOnHomePage)
 
   return {
     props: {
