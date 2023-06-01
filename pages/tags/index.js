@@ -66,7 +66,7 @@ export default function Tags(props) {
             <h1 className="text-4xl my-12">Tags</h1>
             <div className="flex flex-wrap">
                 {tags.map((tag) => (
-                    <Link key={tag.id} href={`/tags/${tag.name}`} className="btn-black mx-2 ">
+                    <Link key={tag.id} href={`/tags/${tag.name}`} className="btn-black m-2 ">
                         {tag.name} ({tag._count.posts})
                     </Link>
                 ))}

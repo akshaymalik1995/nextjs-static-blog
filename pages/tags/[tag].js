@@ -75,7 +75,7 @@ export default function Tag(props) {
     return (
         <>
             <div className="container max-w-3xl mx-auto">
-                <h1 className="text-4xl my-12">{tag.toUpperCase()}</h1>
+                <h1 className="text-3xl  my-12">Posts tagged with <span className="text-violet-700">{tag}</span> </h1>
                 <PostList posts={posts} />
             </div>
         </>
