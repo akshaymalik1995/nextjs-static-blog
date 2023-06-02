@@ -2,24 +2,25 @@ import Link from 'next/link'
 import PostList from '@/components/PostList'
 import appConfig from '@/appConfig'
 import { getPosts } from '@/utils.mjs'
-
+import Search from '@/components/Search'
 
 export async function getStaticProps() {
- let posts = getPosts()
+ let allPosts = getPosts()
  const { postsOnHomePage } = appConfig
- posts = posts.slice(0, postsOnHomePage)
+ let pagePosts = allPosts.slice(0, postsOnHomePage)
 
   return {
     props: {
-      posts: posts || [],
+      pagePosts: pagePosts || [],
+      allPosts : allPosts || [],
     },
   }
 
 }
 
 
-export default function Home({ posts}) {
-  if (!posts || posts?.length === 0) {
+export default function Home({ pagePosts, allPosts}) {
+  if (!pagePosts || pagePosts?.length === 0) {
     return (
       <>
         <div className="container max-w-3xl mx-auto" >
@@ -32,10 +33,10 @@ export default function Home({ posts}) {
   return (
     <>
       <div className="container max-w-3xl mx-auto" >
-        
+      <Search posts={allPosts} />
       <h1 className="text-4xl my-12">Latest</h1>
       <hr></hr>
-        <PostList posts={posts} />
+        <PostList posts={pagePosts} />
         {/* Link to all posts */}
         <Link className="btn-black inline-block my-8" href="/blog">
           All Posts
