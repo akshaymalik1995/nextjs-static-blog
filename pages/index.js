@@ -2,7 +2,7 @@ import Link from 'next/link'
 import PostList from '@/components/PostList'
 import appConfig from '@/appConfig'
 import { getPosts } from '@/utils.mjs'
-import Search from '@/components/Search'
+
 
 export async function getStaticProps() {
  let allPosts = getPosts()
@@ -33,7 +33,7 @@ export default function Home({ pagePosts, allPosts}) {
   return (
     <>
       <div className="container max-w-3xl mx-auto" >
-      <Search posts={allPosts} />
+
       <h1 className="text-4xl my-12">Latest</h1>
       <hr></hr>
         <PostList posts={pagePosts} />
