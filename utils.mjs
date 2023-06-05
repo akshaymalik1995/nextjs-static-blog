@@ -33,6 +33,9 @@ export const getPosts = () => {
 
 
 export const formatDate = (date) => {
+    if (!date) {
+        return ""
+    }
     try {
         date = new Date(date)
         if (!date) {

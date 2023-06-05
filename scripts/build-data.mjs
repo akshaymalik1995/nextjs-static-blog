@@ -7,10 +7,22 @@ import highlight from 'remark-highlight.js';
 import {slugify} from '../utils.mjs';
 import { type } from 'os';
 
+function cleanFilename(filename) {
+    // If the filename contains "/", it's probably a path, so we only want the last part
+    if (filename.includes("\\")) {
+        filename = filename.split("\\").pop()
+    }
+    // remove the .md extension
+    filename = filename.replace(/\.md$/, '')
+    return filename
+
+}
+
+
 const contentPath = path.join(process.cwd(), 'content' ,'pages');
 let contentFiles;
 try {
-    contentFiles = fs.readdirSync(contentPath);
+    contentFiles = fs.readdirSync(contentPath , {recursive: true});
 } catch (err) {
     console.error(`Unable to read directory ${contentPath}: ${err}`);
     process.exit(1);
@@ -19,6 +31,7 @@ try {
 const pagesData = []
 
 contentFiles.forEach(file => {
+    let filename = cleanFilename(file)
     if (!file.endsWith('.md') || file === '_template.md') {
         return;
     }
@@ -31,20 +44,22 @@ contentFiles.forEach(file => {
     }
     let {data, content} = matter(fileContent);
     if (!data.title) {
-        console.error(`File ${file} does not contain a title`);
-        process.exit(1);
-        return;
+        data.title = filename;
+        // console.error(`File ${file} does not contain a title`);
+        // process.exit(1);
+        // return;
     }
     if (!data.date) {
-        console.error(`File ${file} does not contain a date`);
-        process.exit(1);
-        return;
+        data.date = null
+        // console.error(`File ${file} does not contain a date`);
+        // process.exit(1);
+        // return;
     }
     
     if (!data.description) {
         data.description = "";
     }
-    const filename = file.replace(/\.md$/, '');
+    
     data = {...data, slug: slugify(filename, false), id : slugify(data.title)}
 
     if (!data.tags) {
