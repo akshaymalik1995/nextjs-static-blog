@@ -3,7 +3,7 @@ export default function Loading() {
         <>
             {/* A Loading Spinner that covers the entire page */}
             <div className="fixed top-0 left-0 w-screen h-screen flex justify-center
-        items-center bg-gray-100 bg-opacity-50 z-50">
+        items-center z-50">
 
                 <div
                     className="inline-block h-24 w-24 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"

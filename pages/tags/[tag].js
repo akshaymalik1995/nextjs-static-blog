@@ -65,7 +65,7 @@ export default function Tag(props) {
     if (!posts || !tag) {
         return (
             <>
-                <div className="container max-w-3xl mx-auto">
+                <div className="container max-w-3xl mx-auto dark:text-white">
                     <h1 className="text-4xl my-12">Error</h1>
                     <p>There was an error loading this page.</p>
                 </div>
@@ -74,8 +74,8 @@ export default function Tag(props) {
     }
     return (
         <>
-            <div className="container max-w-3xl mx-auto">
-                <h1 className="text-3xl  my-12">Posts tagged with <span className="text-violet-700">{tag}</span> </h1>
+            <div className="container max-w-3xl mx-auto dark:text-white">
+                <h1 className="text-3xl  my-12">Posts tagged with <span className="text-violet-700 dark:text-green-400 ">{tag}</span> </h1>
                 <PostList posts={posts} />
             </div>
         </>

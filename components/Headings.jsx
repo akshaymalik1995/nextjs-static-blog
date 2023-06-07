@@ -13,7 +13,7 @@ export default function Headings({ headings }) {
           
                 <div className="my-8">
                     <div className="text-gray-500 text-sm">
-                        <h3 className="text-gray-700 text-lg mb-2">Table of Contents</h3>
+                        <h3 className="text-gray-700 font-semibold dark:text-gray-100 text-lg mb-2">Table of Contents</h3>
                         <div className="">
                             {headings.map((heading, index) => (
                                 <div key={index} className={`${headingTabs[heading.level]} my-1`}>
@@ -21,7 +21,7 @@ export default function Headings({ headings }) {
                                         to={heading.id}
                                         smooth={true}
                                         duration={500}
-                                        className="hover:text-gray-700 cursor-pointer"
+                                        className="hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-400  cursor-pointer"
                                     >
                                       &bull;  {heading.text}
                                     </ScrollLink>
