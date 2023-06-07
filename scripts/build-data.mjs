@@ -15,11 +15,19 @@ function cleanFilename(filename) {
     // remove the .md extension
     filename = filename.replace(/\.md$/, '')
     return filename
+}
 
+function getTagsFromFilename(filename) {
+    // If the filename contains "/", it's probably a path, split the path and convert each part to a tag except the last part
+    if (filename.includes("\\")) {
+        let tags = filename.split("\\").slice(0, -1)
+        return tags
+    }
+    return []
 }
 
 
-const contentPath = path.join(process.cwd(), 'content' ,'pages');
+const contentPath = path.join(process.cwd(), 'content');
 let contentFiles;
 try {
     contentFiles = fs.readdirSync(contentPath , {recursive: true});
@@ -31,6 +39,11 @@ try {
 const pagesData = []
 
 contentFiles.forEach(file => {
+    // If the dir is ".obsidian", skip it
+    if (file === ".obsidian") {
+        return;
+    }
+    getTagsFromFilename(file)
     let filename = cleanFilename(file)
     if (!file.endsWith('.md') || file === '_template.md') {
         return;
@@ -45,15 +58,9 @@ contentFiles.forEach(file => {
     let {data, content} = matter(fileContent);
     if (!data.title) {
         data.title = filename;
-        // console.error(`File ${file} does not contain a title`);
-        // process.exit(1);
-        // return;
     }
     if (!data.date) {
         data.date = null
-        // console.error(`File ${file} does not contain a date`);
-        // process.exit(1);
-        // return;
     }
     
     if (!data.description) {
@@ -63,7 +70,7 @@ contentFiles.forEach(file => {
     data = {...data, slug: slugify(filename, false), id : slugify(data.title)}
 
     if (!data.tags) {
-        data.tags = [];
+        data.tags = getTagsFromFilename(file)
     }
 
     if (typeof data.tags === "string") {
