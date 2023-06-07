@@ -21,7 +21,9 @@ function getTagsFromFilename(filename) {
     // If the filename contains "/", it's probably a path, split the path and convert each part to a tag except the last part
     if (filename.includes("\\")) {
         let tags = filename.split("\\").slice(0, -1)
-        return tags
+        // Join the tags with a -
+        let tagsString = tags.join("-")
+        return [tagsString]
     }
     return []
 }

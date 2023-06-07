@@ -15,7 +15,8 @@ export default function Blog({ post, headings }) {
             <h1 className="header-title text-4xl text-gray-700 dark:text-white">{post.title}</h1>
 
             {/* ADD TAGS */}
-            <Tags tags={post.tags} />
+            <div className='mt-2'><Tags tags={post.tags} /></div>
+            
 
             <div className="text-sm my-2 text-gray-600 dark:text-gray-400">{post.date}</div>
 

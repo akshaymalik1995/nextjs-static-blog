@@ -28,6 +28,10 @@ export const getPosts = () => {
       posts = posts.map(post => {
         return {...post, date: formatDate(post.date)}
     })
+    // Do not return content of the posts
+    posts = posts.map(post => {
+        return {...post, content: ""}
+    })
     return posts
 }
 
